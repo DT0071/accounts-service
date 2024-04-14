@@ -10,10 +10,11 @@ import lombok.ToString;
 @Getter @Setter @ToString
 public class Account extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "customer_id")//Not required
     private Long customerId;
+
+    @Id
     private Long accountNumber;
     private String accountType;
     private String branchAddress;
